@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     private bool isCrouch = false;
     private Vector3 velocity;
     private Animator anim;
-    public bool walking = false;
+
 
     void Start()
     {
@@ -32,10 +32,7 @@ public class PlayerController : MonoBehaviour
         Vector3 move = transform.forward * Input.GetAxis("Vertical") +
                         transform.right * Input.GetAxis("Horizontal");
 
-        if(!Mathf.Approximately(move.x, 0.0f) || ! Mathf.Approximately(move.y, 0.0f))
-        {
-            //anim.SetFloat("Speed", move.magnitude);
-        }              
+                    
         // фиксирует скорость по диагонали
        // if(move.magnitude > 1)
        // {
@@ -50,19 +47,36 @@ public class PlayerController : MonoBehaviour
             transform.localScale = new Vector3(1, isCrouch ? 1f : 0.5f, 1);
             transform.position += Vector3.up * 0.5f * (isCrouch ? 1 : -1);
             isCrouch = !isCrouch;
+            anim.SetBool("isWalking", true);
         }
+
+        if(Input.GetKeyDown(KeyCode.G))
+        {
+            anim.SetBool("isDead", true);
+        }
+
+        // if(Input.GetKeyDown(KeyCode.F))
+        // {
+        //     anim.SetBool("isAttack1", true);
+        // }
+        // if(Input.GetKeyUp(KeyCode.F))
+        // {
+        //     anim.SetBool("isAttack1", false);
+        // }
 
         //walking
         if (Input.GetKeyDown(KeyCode.LeftControl))
         {
             speed = speed / 2;
-            anim.SetBool("isWalking", false);
+            // anim.SetBool("isWalking", false);
+            // anim.SetFloat("Walking", 1f);
+
             print(speed);
         } 
         if (Input.GetKeyUp(KeyCode.LeftControl))
         {
             speed = speed * 2;
-            anim.SetBool("isWalking", true);
+           // anim.SetBool("isWalking", true);
             Debug.Log(speed);
         }
 
