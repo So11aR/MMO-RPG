@@ -58,8 +58,8 @@ namespace DM
             SetupAnimator();
             rigid = GetComponent<Rigidbody>();
 
-            currentHealth = maxHealth;
-            print(currentHealth);            
+            // currentHealth = maxHealth;
+            // print(currentHealth);            
         }
         
         void SetupAnimator()//Setting up Animator component in the hierarchy.

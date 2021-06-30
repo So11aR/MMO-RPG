@@ -59,7 +59,7 @@ public class Health : MonoBehaviour
     }
     void OnDestroy()
     {
-        GameManager.Instance.IncExp(100);
+        GameManager.Instance.IncExp(200);
     }
 
     // Update is called once per frame
