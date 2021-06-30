@@ -28,6 +28,7 @@ namespace DM
         public int maxHealth = 100;
         public int currentHealth;
         public Image HpBar;
+
             
 
         [Header("States")]
