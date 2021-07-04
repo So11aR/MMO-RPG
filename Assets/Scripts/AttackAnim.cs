@@ -5,19 +5,8 @@ using UnityEngine;
 public class AttackAnim : MonoBehaviour
 {
     public GameObject AI;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    void OnTriggerEnter(Collider col)
+    void OnTriggerStay(Collider col)
     {
         if(col.tag == "Player")
         {

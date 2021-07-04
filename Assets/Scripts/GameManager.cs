@@ -8,8 +8,11 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     private int expPoint = 0;
     private int Herolevel = 1;
-    private int NeedExp = 200;
+    private int NeedExp = 300;
     public Image ExpImage;
+    public GameObject levelUpEffect;
+    public Transform levelUpEffectPoint;
+    public Text HeroLevelText;
 
     // Start is called before the first frame update
     void Awake()
@@ -32,6 +35,9 @@ public class GameManager : MonoBehaviour
       if (expPoint >= NeedExp)
       {
         Herolevel++;
+        HeroLevelText.text = "Lv. " + Herolevel.ToString();
+        GameObject clone = Instantiate(levelUpEffect, levelUpEffectPoint.transform);
+        Destroy(clone, 5f);
         expPoint = 0;
         ExpImage.fillAmount = expPoint;
         NeedExp = NeedExp * 2;
