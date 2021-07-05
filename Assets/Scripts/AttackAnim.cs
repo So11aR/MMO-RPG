@@ -18,7 +18,7 @@ public class AttackAnim : MonoBehaviour
     {
         if(col.tag == "Player")
         {
-            AI.GetComponent<Animator>().SetTrigger("Move");
+            AI.GetComponent<Animator>().SetTrigger("Walk");
         }
     }
 }

@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour
     private Transform target;
     public float EnemyLvl;
 
+
     void Start()
     {
         target = GameObject.FindWithTag("Player").transform;
@@ -23,7 +24,7 @@ public class Enemy : MonoBehaviour
             {
                 transform.LookAt(target.transform);
                 transform.Translate(new Vector3(0,0, speed * Time.deltaTime));
-                gameObject.GetComponent<Animator>().SetTrigger("Move");
+                gameObject.GetComponent<Animator>().SetTrigger("Walk");
             }
         }
     }

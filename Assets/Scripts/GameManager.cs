@@ -34,14 +34,22 @@ public class GameManager : MonoBehaviour
       ExpImage.fillAmount = 1.0f * expPoint / NeedExp;
       if (expPoint >= NeedExp)
       {
-        Herolevel++;
-        HeroLevelText.text = "Lv. " + Herolevel.ToString();
-        GameObject clone = Instantiate(levelUpEffect, levelUpEffectPoint.transform);
-        Destroy(clone, 5f);
-        expPoint = 0;
-        ExpImage.fillAmount = expPoint;
-        NeedExp = NeedExp * 2;
+        HeroUp();
       }
+    }
+
+    public void HeroUp()
+    {
+      Herolevel++;
+      HeroLevelText.text = "Lv. " + Herolevel.ToString();
+      GameObject clone = Instantiate(levelUpEffect, levelUpEffectPoint.transform);
+      Destroy(clone, 5f);
+      expPoint = 0;
+      ExpImage.fillAmount = expPoint;
+      NeedExp = NeedExp * 2;
+      GameObject player = GameObject.FindGameObjectWithTag("Player");
+      print(player);
+      player.GetComponent<Health>().health *= 4;
     }
 
     // Update is called once per frame
