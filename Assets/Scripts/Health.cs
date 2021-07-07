@@ -16,6 +16,8 @@ public class Health : MonoBehaviour
     public float MonsterLevel;
     public float ExpHolder = 0;
 
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +27,9 @@ public class Health : MonoBehaviour
             slider.value = currHP / health;
             hpText.text = currHP.ToString("0");
         }
+
+        
+
     }
     public void GetDamage(int damage)
     {
@@ -51,11 +56,25 @@ public class Health : MonoBehaviour
 
     public void EnemyDie()
     {
+        GameObject enemyAnim = GameObject.Find("Slime");
+        enemyAnim.GetComponent<Animator>().SetTrigger("Die");
 
-        if ( gameObject.GetComponent<Enemy>().EnemyLvl == 1 )
-        {
-            Destroy(gameObject);
-        }
+        GameObject enemy = GameObject.Find("SlimeBody");
+        enemy.SetActive(false);
+        //enemy.GetComponent<Enemy>().speed = 0;
+
+        GameObject dropItem = GameObject.Find("Drop Point");
+        dropItem.GetComponent<EnemyDropItems>().DropItems();
+
+        //GetDamage(0);
+        // GameObject enemy = GameObject.Find("AttackObject");
+        // Destroy(enemy);
+        Destroy(enemyAnim, 2.15f);
+        
+        // if ( gameObject.GetComponent<Enemy>().EnemyLvl == 1 )
+        // {
+        //     Destroy(gameObject);
+        // }
     }
     void OnDestroy()
     {
