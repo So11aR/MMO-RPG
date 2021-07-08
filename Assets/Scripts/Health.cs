@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
-    private float currHP;
+    public float currHP;
     public int health = 100;
     public bool isPlayer;
     [Header("Player")]
@@ -15,7 +15,7 @@ public class Health : MonoBehaviour
     public HpBar hpBar;
     public float MonsterLevel;
     public float ExpHolder = 0;
-
+    private Animator anim;
 
 
     // Start is called before the first frame update
@@ -27,9 +27,7 @@ public class Health : MonoBehaviour
             slider.value = currHP / health;
             hpText.text = currHP.ToString("0");
         }
-
-        
-
+        anim = GetComponent<Animator>();
     }
     public void GetDamage(int damage)
     {
@@ -59,18 +57,15 @@ public class Health : MonoBehaviour
         GameObject enemyAnim = GameObject.Find("Slime");
         enemyAnim.GetComponent<Animator>().SetTrigger("Die");
 
-        GameObject enemy = GameObject.Find("SlimeBody");
-        enemy.SetActive(false);
-        //enemy.GetComponent<Enemy>().speed = 0;
-
         GameObject dropItem = GameObject.Find("Drop Point");
         dropItem.GetComponent<EnemyDropItems>().DropItems();
 
-        //GetDamage(0);
-        // GameObject enemy = GameObject.Find("AttackObject");
-        // Destroy(enemy);
+        GameObject enemy = GameObject.Find("SlimeBody");
+        enemy.SetActive(false);
+
         Destroy(enemyAnim, 2.15f);
-        
+
+
         // if ( gameObject.GetComponent<Enemy>().EnemyLvl == 1 )
         // {
         //     Destroy(gameObject);

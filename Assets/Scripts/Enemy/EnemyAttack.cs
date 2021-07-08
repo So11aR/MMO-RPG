@@ -6,7 +6,6 @@ public class EnemyAttack : MonoBehaviour
 {
     public GameObject triggerDamage;
     public GameObject Slime;
-
     void OnTriggerStay(Collider other)
     {
         if(other.gameObject.CompareTag("Player"))

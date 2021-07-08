@@ -9,7 +9,6 @@ public class Enemy : MonoBehaviour
     public float speed;
     private Transform target;
     public float EnemyLvl;
-
     public GameObject Slime;
 
 
@@ -28,6 +27,10 @@ public class Enemy : MonoBehaviour
                 transform.Translate(new Vector3(0,0, speed * Time.deltaTime));
                 Slime.GetComponent<Animator>().SetTrigger("Walk");
             }
+        }
+        else
+        {
+            Slime.GetComponent<Animator>().SetTrigger("Idle");
         }
     }
 }
