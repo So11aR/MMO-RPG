@@ -9,7 +9,7 @@ public class Health : MonoBehaviour
     public int health = 100;
     public bool isPlayer;
     [Header("Player")]
-    public Slider slider;
+    public Image slider;
     public Text hpText;
     [Header("Enemy")]
     public HpBar hpBar;
@@ -24,7 +24,7 @@ public class Health : MonoBehaviour
         currHP = health;
         if (isPlayer)
         {
-            slider.value = currHP / health;
+            slider.fillAmount = 1.0f * currHP / health;
             hpText.text = currHP.ToString("0");
         }
         anim = GetComponent<Animator>();
@@ -35,7 +35,7 @@ public class Health : MonoBehaviour
 
         if (isPlayer)
         {
-            slider.value = currHP / health;
+            slider.fillAmount = 1.0f * currHP / health;
             hpText.text = currHP.ToString("0");
             if(currHP <= 0)
             {
