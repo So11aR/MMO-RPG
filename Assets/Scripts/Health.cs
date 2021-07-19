@@ -54,23 +54,12 @@ public class Health : MonoBehaviour
 
     public void EnemyDie()
     {
-        GameObject enemyAnim = GameObject.Find("Slime");
-        enemyAnim.GetComponent<Animator>().SetTrigger("Die");
-
-        GameObject dropItem = GameObject.Find("Drop Point");
-        dropItem.GetComponent<EnemyDropItems>().DropItems();
-
-        GameObject enemy = GameObject.Find("SlimeBody");
-        enemy.SetActive(false);
-
-        Destroy(enemyAnim, 2.15f);
-
-
-        // if ( gameObject.GetComponent<Enemy>().EnemyLvl == 1 )
-        // {
-        //     Destroy(gameObject);
-        // }
+        gameObject.GetComponentInParent<Animator>().SetTrigger("Die");
+        gameObject.GetComponentInChildren<EnemyDropItems>().DropItems();
+        gameObject.SetActive(false);
+        Destroy(transform.parent.gameObject, 2.15f);
     }
+
     void OnDestroy()
     {
         GameManager.Instance.IncExp(100);

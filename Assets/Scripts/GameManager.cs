@@ -48,13 +48,7 @@ public class GameManager : MonoBehaviour
       ExpImage.fillAmount = expPoint;
       NeedExp = NeedExp * 2;
       GameObject player = GameObject.FindGameObjectWithTag("Player");
-      print(player);
       player.GetComponent<Health>().health *= 4;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+      
     }
 }

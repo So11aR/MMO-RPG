@@ -17,7 +17,7 @@ public class AddHp : MonoBehaviour
         {
             if(player.currHP < player.health)
             {
-                player.GetDamage(-55);
+                player.GetDamage(-15);
                 Destroy(gameObject);
             }
         }

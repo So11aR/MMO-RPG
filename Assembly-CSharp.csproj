@@ -37,6 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\AssetStore\RGP Tutorial\PostProcessing\Runtime\Components\FxaaComponent.cs" />
+     <Compile Include="Assets\AssetStore\UltimateDungeonPack\Scripts\LightImprove.cs" />
      <Compile Include="Assets\AssetStore\UI\Fonts\Script\scriptTexttest.cs" />
      <Compile Include="Assets\AssetStore\Effects\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_RotateCamera.cs" />
      <Compile Include="Assets\AssetStore\Effects\JMO Assets\Cartoon FX\Scripts\CFX_LightIntensityFade.cs" />
@@ -48,6 +49,7 @@
      <Compile Include="Assets\Scripts\Enemy\Enemy.cs" />
      <Compile Include="Assets\AssetStore\RGP Tutorial\PostProcessing\Runtime\Attributes\TrackballGroupAttribute.cs" />
      <Compile Include="Assets\AssetStore\RGP Tutorial\PostProcessing\Runtime\Utils\ColorGradingCurve.cs" />
+     <Compile Include="Assets\AssetStore\UltimateDungeonPack\Scenes\Demo\FPControls\Scripts\MouseCamLook.cs" />
      <Compile Include="Assets\AssetStore\RGP Tutorial\PostProcessing\Runtime\PostProcessingBehaviour.cs" />
      <Compile Include="Assets\AssetStore\Player\ModularAnimalKnightsPBR\TPController\Scripts\BoolOperator1.cs" />
      <Compile Include="Assets\AssetStore\RGP Tutorial\PostProcessing\Runtime\Models\EyeAdaptationModel.cs" />
@@ -67,6 +69,7 @@
      <Compile Include="Assets\AssetStore\RGP Tutorial\PostProcessing\Runtime\Models\GrainModel.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyDropItems.cs" />
      <Compile Include="Assets\AssetStore\RGP Tutorial\PostProcessing\Runtime\PostProcessingModel.cs" />
+     <Compile Include="Assets\Scripts\AddHp.cs" />
      <Compile Include="Assets\AssetStore\RGP Tutorial\PostProcessing\Runtime\PostProcessingProfile.cs" />
      <Compile Include="Assets\AssetStore\Player\ModularAnimalKnightsPBR\TPController\Scripts\AnimatorMatcher.cs" />
      <Compile Include="Assets\AssetStore\RGP Tutorial\PostProcessing\Runtime\Components\GrainComponent.cs" />
@@ -93,6 +96,7 @@
      <Compile Include="Assets\AssetStore\RGP Tutorial\PostProcessing\Runtime\PostProcessingComponent.cs" />
      <Compile Include="Assets\AssetStore\RGP Tutorial\PostProcessing\Runtime\Components\EyeAdaptationComponent.cs" />
      <Compile Include="Assets\AssetStore\RGP Tutorial\PostProcessing\Runtime\Models\ChromaticAberrationModel.cs" />
+     <Compile Include="Assets\AssetStore\UltimateDungeonPack\Scenes\Demo\FPControls\Scripts\CharacterController.cs" />
      <Compile Include="Assets\AssetStore\RGP Tutorial\PostProcessing\Runtime\Models\ColorGradingModel.cs" />
      <Compile Include="Assets\AssetStore\RGP Tutorial\PostProcessing\Runtime\Models\ScreenSpaceReflectionModel.cs" />
      <Compile Include="Assets\AssetStore\RGP Tutorial\PostProcessing\Runtime\Components\DepthOfFieldComponent.cs" />
@@ -111,7 +115,7 @@
      <Compile Include="Assets\AssetStore\RGP Tutorial\PostProcessing\Runtime\Models\AntialiasingModel.cs" />
      <Compile Include="Assets\LevelUp.cs" />
      <Compile Include="Assets\AssetStore\RGP Tutorial\PostProcessing\Runtime\Models\DitheringModel.cs" />
-     <Compile Include="Assets\Scripts\AddHp.cs" />
+     <Compile Include="Assets\Scripts\Enemy\EnemyDied.cs" />
      <None Include="Assets\AssetStore\RGP Tutorial\PostProcessing\Resources\Shaders\ScreenSpaceReflection.shader" />
      <None Include="Assets\AssetStore\Effects\JMO Assets\Cartoon FX\Shaders\CFX3 Multiply Color.shader" />
      <None Include="Assets\AssetStore\RGP Tutorial\PostProcessing\Resources\Shaders\GrainGen.shader" />

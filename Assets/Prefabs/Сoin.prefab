@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 8587934888634711647}
   - component: {fileID: 8599396475987191283}
   - component: {fileID: 8607405420273063967}
-  - component: {fileID: 3629244560573254148}
   - component: {fileID: 7766973004026903939}
   - component: {fileID: 4633169334461716981}
+  - component: {fileID: 7177320195619430745}
   m_Layer: 0
   m_Name: "\u0421oin"
   m_TagString: Coin
@@ -84,22 +84,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!54 &3629244560573254148
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8585635132199045611}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!65 &7766973004026903939
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -126,3 +110,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.56404316, y: 0.10810318, z: 0.57854855}
   m_Center: {x: -0.000000014901161, y: -0.0000000037252903, z: 1.323489e-23}
+--- !u!54 &7177320195619430745
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8585635132199045611}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
